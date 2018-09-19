@@ -10,8 +10,8 @@ def setup
     @cards = [@card1, @card2]
 end
 
-def test_checkforAce
-  result = CardGame.checkforAce(@card1)
+def test_check_for_ace
+  result = CardGame.check_for_ace(@card1)
   assert_equal(true, result)
 end
 
