@@ -5,9 +5,9 @@
 
 require_relative('card.rb')
 class CardGame
-  
 
-  def checkforAce(card)
+
+  def check_for_ace(card)
     if card.value = 1
       return true
     else
@@ -15,19 +15,20 @@ class CardGame
     end
   end
 
-  dif highest_card(card1 card2)
+  def highest_card(card1, card2)
   if card1.value > card2.value
     return card.name
   else
     card2
   end
 end
-end
 
 def self.cards_total(cards)
   total
   for card in cards
     total += card.value
+  end
     return "You have a total of" + total
   end
+
 end
