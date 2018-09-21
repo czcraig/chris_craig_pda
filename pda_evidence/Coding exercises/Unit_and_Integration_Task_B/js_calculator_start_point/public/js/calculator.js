@@ -55,6 +55,9 @@ Calculator.prototype = {
         break;
         case ('/'):
         this.divide(this.runningTotal);
+        if (number == 0) {
+        this.runningTotal = NaN;
+        }
         break;
       }
     }
