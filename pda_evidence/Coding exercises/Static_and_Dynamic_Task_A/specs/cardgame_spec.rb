@@ -16,5 +16,9 @@ def test_checkforAce
     assert_equal(true, result)
 end
 
+def test_highest_card
+    result = CardGame.highest_card(@card1, @card2)
+    assert_equal(@card1, result)
+end
 
 end
