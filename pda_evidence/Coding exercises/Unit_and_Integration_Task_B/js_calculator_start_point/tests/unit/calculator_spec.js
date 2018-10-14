@@ -46,8 +46,8 @@ describe('calculator', function () {
     calculator.operatorClick('+')
     calculator.numberClick(3);
     calculator.operatorClick('=')
-    assert.equal(calculator.runningTotal, 8);
-  });
+    assert.equal(8, calculator.runningTotal);
+  })
 
   it('can clear a click', function(){
     calculator.numberClick(4);
@@ -56,8 +56,8 @@ describe('calculator', function () {
     calculator.clearClick()
     calculator.numberClick(5);
     calculator.operatorClick('=')
-    assert.equal(calculator.runningTotal, 9);
-  });
+    assert.equal(9, calculator.runningTotal);
+  })
 
 
 

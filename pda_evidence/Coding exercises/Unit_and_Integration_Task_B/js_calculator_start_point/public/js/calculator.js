@@ -1,4 +1,4 @@
-var Calculator = function(){
+vavar Calculator = function(){
   this.previousOperator = null; // the last operator the user clicked
   this.previousTotal = 0;       // the total of the previous operation
   this.newTotal = true;         // whether the previous operation has just been calculated
@@ -55,9 +55,6 @@ Calculator.prototype = {
         break;
         case ('/'):
         this.divide(this.runningTotal);
-        if (number == 0) {
-        this.runningTotal = NaN;
-        }
         break;
       }
     }
@@ -72,8 +69,10 @@ Calculator.prototype = {
     // replace the previous total with the current running total and flag that a
     // new total has been calculated
 
-    this.previousTotal = this.runningTotal;
-    this.newTotal = true;
+    if (this.runningTotal == Infinity) { this.runningTotal = "NaN" } else {
+      this.previousTotal = this.runningTotal;
+      this.newTotal = true;
+    }
   },
 
   clearClick: function() {
